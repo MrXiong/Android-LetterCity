@@ -10,12 +10,13 @@ import android.widget.TextView;
 
 import com.lettercity.choosecity.R;
 import com.lettercity.entitiy.City;
+import com.lettercity.utils.AdapterUtils;
 
 public class HotCityAdapter extends BaseAdapter {
 	private List<City> mList;
 
 	public HotCityAdapter(List<City> list) {
-		this.mList = list;
+		this.mList = AdapterUtils.getList(list);
 
 	}
 

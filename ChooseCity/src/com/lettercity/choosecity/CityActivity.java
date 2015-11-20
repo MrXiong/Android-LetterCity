@@ -214,7 +214,7 @@ public class CityActivity extends Activity {
 	}
 
 	private void filterData2(String filterStr) {
-		mSearchCityAdapter = new SearchCityAdapter(CityActivity.this, mCitylist);
+		mSearchCityAdapter = new SearchCityAdapter(mCitylist);
 		mSearchListView.setAdapter(mSearchCityAdapter);
 		mSearchListView.setTextFilterEnabled(true);
 		if (mCitylist.size() < 1 || TextUtils.isEmpty(filterStr)) {

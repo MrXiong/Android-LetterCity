@@ -12,6 +12,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import com.lettercity.application.MyApplication;
 import com.lettercity.choosecity.R;
 import com.lettercity.entitiy.City;
 import com.lettercity.utils.AdapterUtils;
@@ -28,8 +29,8 @@ public class SearchCityAdapter extends BaseAdapter implements Filterable {
 
 	// private String mFilterStr;
 
-	public SearchCityAdapter(Context context, List<City> allCities) {
-		mContext = context;
+	public SearchCityAdapter(List<City> allCities) {
+		mContext = MyApplication.getContext();
 		mAllCities = allCities;
 		mResultCities = AdapterUtils.getList(allCities);
 		mInflater = LayoutInflater.from(mContext);
