@@ -1,0 +1,14 @@
+[
+            {
+                "cityId": "hangzhou",
+                "cityName": "北京"
+            },
+            {
+                "cityId": "zhengzhou",
+                "cityName": "上海"
+            },
+            {
+                "cityId": "linyi",
+                "cityName": "广州"
+            }
+]

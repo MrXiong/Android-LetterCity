@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="tag_local" type="id"/>
+    <item name="tag_hot" type="id"/>
+    <item name="tag_defult" type="id"/>
+
+</resources>

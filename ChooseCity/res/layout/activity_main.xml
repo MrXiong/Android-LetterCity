@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lettercity.choosecity.MainActivity" >
+
+   <LinearLayout
+        android:clickable="true"
+        android:id="@+id/imagecontainer_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         >
+
+        <Button
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:text="未定" />
+
+        <ImageView
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"
+            android:src="@drawable/ic_expand_bottom" />
+    </LinearLayout>
+
+</RelativeLayout>

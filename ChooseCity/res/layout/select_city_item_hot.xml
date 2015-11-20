@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/city_default"
+    android:orientation="vertical" >
+
+        <TextView
+        android:id="@+id/group_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/city_default"
+        android:gravity="left|center"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="14.0dip"
+        android:paddingRight="14.0dip"
+        android:paddingTop="5.0dip"
+        android:text="@string/hot_city"
+        android:textStyle="bold" />
+
+    <com.lettercity.view.NotRollGridView
+        android:id="@+id/gv_select_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="5dip"
+        android:textColor="@android:color/black"
+        android:numColumns="3"
+        android:layout_margin="5dip"
+        android:verticalSpacing="5dip"  />
+
+</LinearLayout>

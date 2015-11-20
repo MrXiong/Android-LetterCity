@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/city_pressed"
+        android:gravity="center" >
+
+        <com.lettercity.view.ClearEditText
+            android:id="@+id/et_msg_search"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_bg_white_corners"
+            android:drawableLeft="@drawable/ic_search_small_pressed"
+            android:drawablePadding="5dp"
+            android:hint="城市/拼音"
+            android:paddingLeft="5dp"
+            android:textColorHint="@android:color/black" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/city_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:orientation="horizontal" >
+            
+            <ScrollView
+                android:id="@+id/sv_citylist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ListView
+                        android:id="@+id/lv_citylist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cacheColorHint="#00000000"
+                        android:scrollbars="none" />
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_mid_letter"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/letter_mid_view_background"
+                android:gravity="center"
+                android:padding="5dip"
+                android:textSize="35.0dip"
+                android:visibility="invisible" />
+
+            <!-- 加载数据库时间太长 -->
+
+            <include
+                android:id="@+id/citys_list_load"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                layout="@layout/base_load_empty_layout" />
+
+            <com.lettercity.view.CityLetterSortView
+                android:id="@+id/right_letter"
+                android:layout_width="25dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/search_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/search_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:focusableInTouchMode="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/search_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10.0dip"
+                android:drawablePadding="50dp"
+                android:text="亲，貌似没有找到额……"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>
